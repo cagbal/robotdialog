@@ -4,7 +4,19 @@ from. import helpers
 
 import random
 
+class Talker(object):
+    """Optional module for running the mp3 files returned by manager"""
+    def __init__(self, manager):
+        super(Talker, self).__init__()
+
+        if isinstance(manager, Manager) is False:
+            raise Exception("Manager's type is wrong")
+
+        self.manager = manager
+
+
 class Manager(object):
+    """Manager that handles all operations"""
     def __init__(self, config_file):
         self.config = helpers.config_parse(config_file)
         self.folder_name = self.config["sound_directory"]
