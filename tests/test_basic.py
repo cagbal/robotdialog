@@ -80,5 +80,16 @@ class TestManager(unittest.TestCase):
         self.assertEqual(sorted(manager.get_soundfiles__pool("water2")),
          sorted(["your_water.mp3","water.mp3"]))
 
+class TestTalker(unittest.TestCase):
+    def test_talker_creation(self):
+        manager = core.Manager("./config.json")
+
+        talker = core.Talker(manager)
+
+        with self.assertRaises(Exception):
+             core.Talker("aaa")
+
+
+
 if __name__ == '__main__':
     unittest.main()
