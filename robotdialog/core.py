@@ -4,6 +4,34 @@ from. import helpers
 
 import random
 
+import os
+
+def say(fun, pool_name, sound_folder_path):
+    """
+    Just a wrapper that uses the output of the given function as filename to
+    playsound
+    """
+    from playsound import playsound
+
+    try:
+        sound_file = fun(pool_name)
+
+        print(sound_file)
+
+        print(sound_folder_path)
+
+        sound_file = os.path.join(sound_folder_path, sound_file)
+
+        print(sound_file)
+
+        playsound(sound_file)
+    except Exception as e:
+        print("ERROR: I cannot talk!")
+        print(e)
+
+
+
+
 class Talker(object):
     """Optional module for running the mp3 files returned by manager"""
     def __init__(self, manager):
