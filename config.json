@@ -1,113 +1,38 @@
 {
-    "sound_directory": "./sound",
+    "sound_directory": "/u/robot/git/sm/src/scenario_sa/sound",
     "sound_pool":
       [
         {
-          "pool_name" : "greetings",
+          "pool_name" : "tutlingen_stage",
           "pool_items" : [
-              "hallo.mp3",
-              "guten_morgen.mp3",
-              "guten_tag.mp3"
+              "de_original/rede_2.mp3"
           ],
           "child" : null,
-          "allowed_people" :
-          [
-            "nina",
-            "mark",
-            "jennifer"
-          ]
+          "allowed_people" : null
         },
         {
-          "pool_name" : "waiting",
+          "pool_name" : "do_you_want_something",
           "pool_items" : [
-            "wait.mp3",
-            "wait_a_moment.mp3"
+              "de_original/darf.mp3"
           ],
           "child" : null,
-          "allowed_people" :
-          [
-            "nina",
-            "mark",
-            "jennifer"
-          ]
+          "allowed_people" : null
         },
         {
-          "pool_name" : "items",
-          "pool_items" : null,
-          "child" : [
-              {
-                  "pool_items": [
-                      "your_orange_juice.mp3",
-                      "orange_juice.mp3"
-                  ],
-                  "pool_name": "orange_juice",
-                  "child" :
-                  [
-                      {
-                    "pool_name" : "positive",
-                    "pool_items" : [
-                        "positive_orange.mp3"
-                    ],
-                    "child" : null,
-                    "allowed_people" :
-                    [
-                      "nina"
-                    ]
-                  },
-                  {
-                  "pool_name" : "negative",
-                  "pool_items" : [
-                    "negative_orange.mp3"
-                  ],
-                  "child" : null,
-                  "allowed_people" :
-                  [
-                    "nina"
-                  ]
-                  }
-                ],
-                "allowed_people" :
-                [
-                  "nina"
-                ]
-              },
-              {
-                  "pool_items": [
-                      "your_apple_juice.mp3",
-                      "apple_juice.mp3"
-                  ],
-                  "pool_name": "apple_juice",
-                  "child" : null,
-                  "allowed_people" :
-                  [
-                    "mark"
-                  ]
-              },
-              {
-                  "pool_items": [
-                      "your_water.mp3",
-                      "water.mp3"
-                  ],
-                  "pool_name": "water2",
-                  "child" : null,
-                  "allowed_people" :
-                  [
-                    "jennifer"
-                  ]
-              },
-              {
-                  "pool_items": [
-                      "your_water2.mp3",
-                      "water2.mp3"
-                  ],
-                  "pool_name": "water2",
-                  "child" : null,
-                  "allowed_people" :
-                  [
-                    "jennifer"
-                  ]
-              }
-          ]
+          "pool_name" : "select_your_drink",
+          "pool_items" : [
+              "de_original/wahlen.mp3"
+          ],
+          "child" : null,
+          "allowed_people" : null
+        },
+        {
+          "pool_name" : "your_drink_will_be_ready",
+          "pool_items" : [
+              "de_original/serviert.mp3"
+          ],
+          "child" : null,
+          "allowed_people" : null
         }
     ]
 }
